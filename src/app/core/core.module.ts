@@ -2,14 +2,25 @@ import { ItemService } from './services/item.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { NavComponent } from './components/nav/nav.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    NavComponent
+  ],
   imports: [
     CommonModule,
-    HttpClientModule
+    RouterModule,
+    HttpClientModule,
   ],
-  providers: [ItemService]
+  providers: [
+    ItemService
+  ],
+  exports:[
+    NavComponent,
+  ]
+  
 })
 export class CoreModule { }

@@ -1,15 +1,12 @@
-export interface CharacterInterface {
+export interface Items {
     id: number;
     name: string;
     image: string;
+    winner?: boolean
   }
   
-  export interface CharacterResponseInterface {
-    info: {
-      count: number;
-      next: string;
-      pages: number;
-      prev: string;
-    };
-    results: CharacterInterface[];
+  export interface ItemQuote{
+    quote: string;
+    winner?: boolean
+
   }

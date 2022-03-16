@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ItemComponent } from './components/item/item.component';
+import { itemComponent } from './components/item/item.component';
 import { RouterModule } from '@angular/router';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
-    ItemComponent,
+    itemComponent,
+    FormComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
+  ]
+  exports: [
+    itemComponent,
   ]
   
 })

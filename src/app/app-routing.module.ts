@@ -11,6 +11,18 @@ const routes: Routes = [
     path: `list`, loadChildren: () =>
       import('./pages/list/list.module').then(m => m.ListModule)
   },
+  {
+    path: `form`, loadChildren: () =>
+      import('./pages/form/form.module').then(m => m.FormModule)
+  },
+  {
+    path: `about`, loadChildren: () =>
+      import('./pages/about/about.module').then(m => m.AboutModule)
+  },
+  {
+    path: `item-detail`, loadChildren: () =>
+      import('./pages/item-detail/item-detail.module').then(m => m.ItemDetailModule)
+  },
 ];
 
 @NgModule({

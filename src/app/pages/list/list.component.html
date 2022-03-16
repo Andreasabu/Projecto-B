@@ -1,7 +1,12 @@
 <div>
-    <app-product
-        *ngFor="let item of items"
-        [item]="item"
-        
-    ></app-product>
+    <p>QUEENS</p>
+    
 </div>
+
+<div class="product-list">
+    <app-list
+        *ngFor="let item of (items | filterProducts:filterValue)"
+        [item]="item"
+        [enableProductEdit]="enableProductEdit"
+        (onDeleteProduct)="deleteParentProduct($event)"
+    ></app-list>

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl : 'http://www.nokeynoshade.party/api/queens/all',
+  baseUrl: 'http://www.nokeynoshade.party/api/queens/all',
 };
 
 /*

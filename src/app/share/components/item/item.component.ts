@@ -1,6 +1,7 @@
+import { Item } from './../../../core/services/models/item.model';
 import { ItemService } from './../../../core/services/item.service';
 import { Component, OnInit } from '@angular/core';
-import { CharacterInterface, CharacterResponseInterface } from 'src/app/core/services/models/item.model';
+
 
 
 @Component({
@@ -10,19 +11,19 @@ import { CharacterInterface, CharacterResponseInterface } from 'src/app/core/ser
 })
 export class itemComponent implements OnInit {
 
-  characterList: CharacterInterface[] = [];
+  itemList: Item[] = [];
   constructor(private ItemService: ItemService) { }
 
   ngOnInit(): void {
-    this.ItemService.getCharacters()
-    .subscribe((data: CharacterResponseInterface) => {
-      const results: CharacterInterface[] = data.results;
+    this.ItemService.getItems()
+    .subscribe((data: Item) => {
+      const results: Item[] = data.results;
       const formattedResults = results.map(({ id, name, image }) => ({
         id,
         name,
         image,
       }));
-      this.characterList = formattedResults;
+      this.itemList = formattedResults;
     });
   }
 }
